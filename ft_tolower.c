@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:13:39 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/21 09:57:27 by ktrout           ###   ########.fr       */
+/*   Created: 2019/05/21 12:02:34 by ktrout            #+#    #+#             */
+/*   Updated: 2019/05/21 12:03:52 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.f"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int		ft_tolower(int c)
 {
-	size_t i;
-	size_t j;
-
-	i = 0;
-	while (haystack[i] != '\0')
-	{
-		j = 0;
-		while (needle[j] == haystack[i + j])
-		{
-			if (needle[j + 1] == '\0')
-			{
-				return ((char *)&haystack[i]);
-			}
-			j++;
-		}
-		i++;
-	}
-	return (0);
+	if (c >= 65 && c <= 90)
+		c = c + 32;
+	return (c);
 }

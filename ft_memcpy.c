@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:13:39 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/21 09:57:27 by ktrout           ###   ########.fr       */
+/*   Created: 2019/05/21 13:58:28 by ktrout            #+#    #+#             */
+/*   Updated: 2019/05/21 14:16:05 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	size_t j;
+	size_t				i;
+	unsigned char		*ptr1;
+	unsigned char		*ptr2;
 
 	i = 0;
-	while (haystack[i] != '\0')
+	ptr1 = (unsigned char *)dst;
+	ptr2 = (unsigned char *)src;
+	while (i < n)
 	{
-		j = 0;
-		while (needle[j] == haystack[i + j])
-		{
-			if (needle[j + 1] == '\0')
-			{
-				return ((char *)&haystack[i]);
-			}
-			j++;
-		}
+		ptr1[i] = ptr2[i];
 		i++;
 	}
-	return (0);
+	return (dst);
 }
