@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:06:50 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/22 14:55:16 by ktrout           ###   ########.fr       */
+/*   Created: 2019/05/22 08:45:19 by ktrout            #+#    #+#             */
+/*   Updated: 2019/05/22 08:55:35 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t i;
-	size_t j;
 
 	i = 0;
-	while (haystack[i] != '\0')
-	{
-		j = 0;
-		while ((needle[j] == haystack[i + j]) && i < len && j < len)
-		{
-			if (needle[j + 1] == '\0')
-			{
-				return ((char *)&haystack[i]);
-			}
-			j++;
-		}
+	while ((i < n) && ((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
 		i++;
-	}
-	return (0);
+	if (i == n || s1 == s2)
+		return (0);
+	else
+		return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
