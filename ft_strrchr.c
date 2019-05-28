@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:37:43 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/23 13:28:02 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/05/28 07:36:51 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_strrchr(const char *s, int c)
 			last = (char *)s;
 		++s;
 	}
-	if ((char *)s != '\0')
-		return ((char *)s);
+	if (last != '\0')
+		return (last);
 	if (c == '\0')
 		return ((char *)s);
 	return (0);
