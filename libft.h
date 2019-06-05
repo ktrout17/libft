@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/05 09:40:13 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/05 13:01:48 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+void				ft_putchar(char c);
+void				ft_putstr(char const *str);
+void				ft_putendl(char const *s);
+void				ft_putnbr(int n);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char const *str, int fd);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -50,6 +58,7 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
