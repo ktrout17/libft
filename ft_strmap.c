@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:06:20 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/29 11:18:16 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/07 10:47:53 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	if (s == NULL || f == NULL)
 		return (NULL);
-	new = (char *)malloc(ft_strlen(s));
+	new = (char *)malloc(ft_strlen(s) + 1);
 	if (new != '\0')
 	{
 		while (*s != '\0')

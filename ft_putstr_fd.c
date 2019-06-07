@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:48:58 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/05 12:56:53 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/07 10:30:53 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char const *str, int fd)
 {
 	size_t i;
 
+	if (!str)
+		return ;
 	i = 0;
 	while (str[i] != '\0')
 	{

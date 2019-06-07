@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:36:05 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/05 12:51:59 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/07 10:29:51 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *str)
 {
+	if (!str)
+		return ;
 	while (*str != '\0')
 	{
 		ft_putchar(*str);
