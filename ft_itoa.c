@@ -6,28 +6,28 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:53:36 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/07 10:44:33 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/11 07:55:47 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char    *check_min_int(char *minint)
+static char		*check_min_int(char *minint)
 {
-    int        i;
-    char    *min;
+	int		i;
+	char	*min;
 
-    i = 0;
-    min = ft_strnew(11);
-    while (i < 11)
-    {
-        min[i] = minint[i];
-        i++;
-    }
-    return (min);
+	i = 0;
+	min = ft_strnew(11);
+	while (i < 11)
+	{
+		min[i] = minint[i];
+		i++;
+	}
+	return (min);
 }
 
-static size_t		itoa_len(int n)
+static size_t	itoa_len(int n)
 {
 	size_t		len;
 
@@ -44,7 +44,7 @@ static size_t		itoa_len(int n)
 	return (len);
 }
 
-char				*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	size_t		len;
 	char		*res;
