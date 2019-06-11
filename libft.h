@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/06 15:10:35 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/11 12:18:04 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *str, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -76,5 +77,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 #endif
