@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:27:12 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/11 15:40:15 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/12 07:56:23 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list *head;
 	t_list *current;
 
+	if (lst == NULL || f == NULL)
+		return (NULL);
 	head = f(lst);
 	if (head == NULL)
 		return (NULL);
