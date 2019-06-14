@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:53:36 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/11 07:55:47 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/14 08:39:40 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,6 @@ static char		*check_min_int(char *minint)
 	return (min);
 }
 
-static size_t	itoa_len(int n)
-{
-	size_t		len;
-
-	if (n == 0)
-		return (1);
-	len = 0;
-	if (n < 0)
-		len++;
-	while (n)
-	{
-		n = n / 10;
-		len++;
-	}
-	return (len);
-}
-
 char			*ft_itoa(int n)
 {
 	size_t		len;
@@ -51,7 +34,7 @@ char			*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (check_min_int("-2147483648"));
-	len = itoa_len(n);
+	len = ft_itoa_len(n);
 	if (!(res = (char *)malloc(len + 1)))
 		return (NULL);
 	res[len--] = '\0';

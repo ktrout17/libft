@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/11 15:40:27 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/14 08:50:06 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char				**ft_strsplit(char const *str, char c);
 char				*ft_itoa(int n);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
+size_t				ft_itoa_len(int n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -80,6 +81,9 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
+int					ft_isprime(int c);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
