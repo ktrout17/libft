@@ -6,7 +6,7 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/14 08:50:06 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:27:44 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ int					ft_toupper(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isprime(int c);
+int					ft_count_words(char const *str, char delim, int index);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
