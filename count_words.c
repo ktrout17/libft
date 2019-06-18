@@ -6,13 +6,13 @@
 /*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 10:25:49 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/18 10:27:06 by ktrout           ###   ########.fr       */
+/*   Updated: 2019/06/18 13:41:42 by ktrout           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_words(char const *str, char delim, int index)
+int		count_words(char const *str, char delim, int index)
 {
 	int		count;
 
