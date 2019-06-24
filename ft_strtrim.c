@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Allocates with malloc and returns a copy of the string given as argument
+** without whitespaces at the beginning or at the end of the string. The
+** following characters: ' ', '\n' and '\t' will be considered as whitespaces.
+** If s has no whitespaces at the beginning or at the end, the function returns
+** a copy of s. If the allocation fails, the function returns NULL.
+*/
+
 char	*ft_strtrim(char const *s)
 {
 	size_t	start;
@@ -28,7 +36,7 @@ char	*ft_strtrim(char const *s)
 	while ((s[len - 1] == ' ' || s[len - 1] == '\n' || s[len - 1] == '\t')
 			&& s[start] != '\0')
 		len--;
-	newstr = ft_strsub(s, start, len - start);
+	newstr = ft_strsub(s, start, (len - start));
 	if (newstr != '\0')
 		return (newstr);
 	return (NULL);

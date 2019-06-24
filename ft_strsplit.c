@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/* 
+** Allocates with malloc and returns an array of "fresh" strings (all ending
+** with '\0', including the array itself) obtained by spliting s using the 
+** character c as delimeter. If the allocation fails, the function returns NULL.
+** Example: ft_strsplit("*hello*fellow***students*", '*') returns the array
+** ["hello", "fellow", "students"].
+*/
+
 static int		mystrlen(char const *str, char delim, int index)
 {
 	int		len;
