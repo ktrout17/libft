@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Lexicographically compares the NULL-terminated strings s1 and s2 and will
+** only search s1 to its nth position. It returns 1 if s1 is greater than s2, 
+** -1 if s1 is less than s2 and 0 if they are equal.
+*/
+
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if (n == 0)

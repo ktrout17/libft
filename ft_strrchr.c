@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Returns a pointer to the last occurence of the character c in the string s
+** or NULL if the character is not found. The terminating null byte is 
+** considered part of the string, so that if c is specified as '\0', the
+** function returns a pointer to the terminator.
+*/
+
 char	*ft_strrchr(const char *s, int c)
 {
 	char *last;

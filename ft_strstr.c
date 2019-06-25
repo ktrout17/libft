@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Finds the first occurrence of the substring needle in the string haystack.
+** The terminating null bytes are not compared and it returns a pointer to the 
+** beginning of the substring or NULL if no substring is found. If needle is an
+** empty string, haystack is returned.
+*/
+
 char	*ft_strstr(const char *haystack, const char *needle)
 {
 	size_t i;

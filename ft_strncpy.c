@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Copies at most n bytes of src (including null-terminator) to dst. If there is
+** no null byte among the first n bytes of src, string placed in dst will not be
+** null-terminated. If the length of src is less than n, additional null bytes
+** are written to dst to ensure that a total of n bytes are written.
+*/
+
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t i;

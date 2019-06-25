@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Takes the list of lst and applies to each link the function f, then creates
+** and returns a "fresh" list. This results in successive applications of the
+** function recursively until the end of the list is reached and the 
+** new list is returned/
+*/
+
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *head;

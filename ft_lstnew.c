@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+** Allocates memory for, and returns a "fresh" linked list. The elements content
+** and content_size within the new link will be copied from the parameters of
+** the function. If the parameter content is NULL, the element content_size is
+** initialized to 0 regardless of the parameter of the content_size. The element
+** of next is initialized to NULL. If the memory allocation fails, it returns 
+** NULL.
+*/
+
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *fresh;

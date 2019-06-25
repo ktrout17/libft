@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** Takes the function f and applies it to every link in the linked list.
+*/
+
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list *temp;

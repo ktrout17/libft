@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Adds a new link (called "new") to a list and places this link at the head of
+** the list.
+*/
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	new->next = *alst;

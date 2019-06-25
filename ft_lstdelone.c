@@ -12,9 +12,19 @@
 
 #include "libft.h"
 
+/*
+** Takes the address of a pointer on a link and frees the memory content of the 
+** link with the function 'del'. The memory of the element next should never be
+** freed. In order to terminate the link, the pointer on the current link should
+** be put to NULL.
+*/
+
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
-	*alst = NULL;
+	if (del != NULL && *alst != NULL)
+	{
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
+	}
 }
