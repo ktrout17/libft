@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Appends s2 to s1 and will use at most n bytes from s2. s2 does not need to
+** be null-terminated if it conatins n or more bytes. The resulting string in
+** s1 is null-terminated.
+*/
+
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t i;

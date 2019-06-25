@@ -12,25 +12,20 @@
 
 #include "libft.h"
 
+/*
+** Copies len bytes from src to dst, the strings may overlap. It returns the
+** original value of dst.
+*/
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*dest;
-	char	*source;
+	char *temp;
 
-	i = 0;
-	dest = (char *)dst;
-	source = (char *)src;
-	if (src == dst && len > 0)
+	temp = (char *)malloc(sizeof(char) * len);
+	if (temp == NULL)
 		return (NULL);
-	if (source < dest)
-		while ((int)(--len) >= 0)
-			*(dest + len) = *(source + len);
-	else
-		while (i < len)
-		{
-			*(dest + i) = *(source + i);
-			i++;
-		}
+	ft_memcpy(temp, src, len);
+	ft_memcpy(dst, temp, len);
+	free(temp);
 	return (dst);
 }

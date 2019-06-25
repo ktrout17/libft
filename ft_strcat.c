@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Appends s2 to s1, overwriting the '\0' at the end of s1 and then adds '\0'.
+** Strings may not overlap and s1 must have enough space for the result.
+*/
+
 char	*ft_strcat(char *s1, const char *s2)
 {
 	size_t i;

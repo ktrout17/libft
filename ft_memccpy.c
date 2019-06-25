@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Copies bytes from string src to string dst. n bytes are copied, and a NULL 
+** pointer is returned. If c occurs in the src, the copy stops and a pointer to 
+** the byte after the copy of c in dst is returned. The source and destination 
+** strings should not overlap, as the behavior is undefined.
+*/
+
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t			i;

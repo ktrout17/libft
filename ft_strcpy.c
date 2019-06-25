@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Copies src (including null-terminator) to dst. The strings may not overlap
+** and dst must be large enough to recieve the copy.
+*/
+
 char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t i;

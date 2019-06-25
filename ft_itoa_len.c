@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* 
+** Function to check the length of the int argument in ft_itoa.
+*/
+
 size_t		ft_itoa_len(int n)
 {
 	size_t		len;

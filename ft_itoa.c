@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/* 
+** Allocates with malloc and returns a "fresh" string ending with '\0' 
+** representing the integer n given as argument. Negative numbers must be
+** supported. If the allocation fails, the function returns NULL.
+*/
+
+/* 
+** Checks if minimum int is -2147483648 (lowest possible int) and returns it in
+** char form if it is.
+*/
 static char		*check_min_int(char *minint)
 {
 	int		i;

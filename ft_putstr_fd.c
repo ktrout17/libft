@@ -12,16 +12,18 @@
 
 #include "libft.h"
 
+/*
+** Outputs the string s to the file descriptor fd.
+*/
+
 void	ft_putstr_fd(char const *str, int fd)
 {
-	size_t i;
 
 	if (!str)
 		return ;
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		ft_putchar_fd(str[i], fd);
-		i++;
+		ft_putchar_fd(*str, fd);
+		str++;
 	}
 }

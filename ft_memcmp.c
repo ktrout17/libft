@@ -12,15 +12,26 @@
 
 #include "libft.h"
 
+/*
+** Compares byte string s1 to byte string s2. Function returns 0 if the strings 
+** are identical, otherwise it returns the difference between the first two
+** differing bytes.
+*/
+
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
 	i = 0;
-	while ((i < n) && ((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
-	if (i == n || s1 == s2)
-		return (0);
-	else
-		return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	}
+	return (0);
 }
